@@ -12,7 +12,12 @@
     <nav>
       <div class="navbar-header">
         <div class="brand-name">Ansh Gautam</div>
-        <div class="navbar-tabs">
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+        <div class="navbar-tabs" id="primary-navigation">
           <div class="navbar-tab">
             <div class="navbar-link">
               <a href="#about" style="text-decoration: none; color: black">
@@ -140,4 +145,15 @@
     </footer>
     </div>
   </body>
+  <script>
+    (function () {
+      var toggle = document.querySelector('.menu-toggle');
+      var nav = document.getElementById('primary-navigation');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function () {
+        var isOpen = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+      });
+    })();
+  </script>
 </html>

@@ -36,6 +36,23 @@ body{
   right: 52px;
   top: 7px;
 }
+/* Hamburger button */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.menu-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #25282b;
+}
 .navbar-tab {
   display: flex;
   flex-direction: column;
@@ -365,8 +382,174 @@ body{
   font-weight: 400;
   position: relative;
 }
+/* ---------- Responsive Base ---------- */
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+}
 
+/* ---------- Responsive Breakpoints ---------- */
+@media (max-width: 1024px) {
+  .about-content {
+    width: 100%;
+  }
+  .about-images {
+    width: 100%;
+    height: auto;
+    top: 0;
+    left: 0;
+  }
+  .about-image-main {
+    width: 60%;
+    max-width: 420px;
+    height: auto;
+    top: 0;
+    left: 0;
+    position: relative;
+    margin: 0 auto;
+  }
+  .project-image {
+    width: 100%;
+  }
+}
 
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar-header {
+    padding: 10px 16px;
+    height: auto;
+    align-items: center;
+  }
+  .brand-name, .navbar-tabs {
+    position: static;
+    left: auto;
+    right: auto;
+    top: auto;
+  }
+  .navbar-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu-toggle { display: inline-flex; }
+  .navbar-tabs {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin-top: 8px;
+  }
+  .navbar-tabs.open { display: flex; }
 
+  /* About */
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-intro {
+    padding: 24px 16px;
+  }
+  .about-title {
+    width: 100%;
+    font-size: 36px;
+    line-height: 120%;
+  }
+  .about-description {
+    width: 100%;
+    font-size: 18px;
+  }
+  .about-buttons {
+    flex-wrap: wrap;
+  }
+  .about-images {
+    width: 100%;
+    position: relative;
+    height: 320px;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: visible;
+  }
+  .about-images img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+  }
+  .about-image-main {
+    width: 65%;
+    max-width: 340px;
+    z-index: 2;
+  }
+  .about-images img:nth-child(2) {
+    width: 80%;
+    max-width: 400px;
+    z-index: 1;
+  }
 
+  /* Projects */
+  .projects-title {
+    font-size: 36px;
+  }
+  .project-card {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    padding: 16px;
+    width: 90vw;
+  }
+  .project-image {
+    width: 100%;
+    height: auto;
+  }
+  .project-info {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .project-name {
+    left: 0;
+    text-align: center;
+    font-size: 28px;
+  }
+  .project-description {
+    width: 100%;
+    height: auto;
+    text-align: left;
+  }
 
+  /* Footer */
+  .footer-section {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-tabs {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .btn-text {
+    font-size: 16px;
+  }
+  .projects-title {
+    font-size: 28px;
+  }
+  .about-title {
+    font-size: 28px;
+  }
+  .about-description {
+    font-size: 16px;
+  }
+  .about-images {
+    height: 260px;
+  }
+  .about-image-main {
+    width: 60%;
+    max-width: 280px;
+  }
+  .about-images img:nth-child(2) {
+    width: 75%;
+    max-width: 340px;
+  }
+}
