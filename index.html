@@ -37,6 +37,7 @@
           </div>
         </div>
       </div>
+      <div class="navbar-overlay"></div>
     </nav>
     <section id="about">
       <div class="about-section">
@@ -92,9 +93,10 @@
         <div class="project-card">
           <div class="project-info">
             <div class="project-name">
-              Project:1
+              My Portfolio
               <div class="projects-divider"></div>
             </div>
+            
 
             <div class="project-description">
               I have developed my personal portfolio website to showcase my
@@ -114,16 +116,17 @@
 
         <div class="project-card">
           <div class="project-image">
-            <img src="assets/images/upcoming.jpeg" alt="" />
+            <img src="assets/images/markdown-preview.png" alt="" />
           </div>
           <div class="project-info">
             <div class="project-name">
-              Up-coming
-              <div class="projects-divider"></div>
+              Live Markdown Preview
+              
             </div>
+            <div class="projects-divider"></div>
 
             <div class="project-description">
-              working on my next project and it will be soon display here.
+              The Live Markup Previewer is a real-time web application designed to convert Markdown text to HTML. This project showcases my proficiency in full-stack development by integrating a robust FastAPI backend with a modern, interactive frontend built using HTML, JavaScript, and Tailwind CSS. The application features live preview functionality, advanced Markdown support including syntax highlighting with Pygments, tables, and special admonition blocks. This project highlights my ability to create a responsive, feature-rich web tool.
             </div>
           </div>
         </div>
@@ -149,10 +152,28 @@
     (function () {
       var toggle = document.querySelector('.menu-toggle');
       var nav = document.getElementById('primary-navigation');
-      if (!toggle || !nav) return;
+      var overlay = document.querySelector('.navbar-overlay');
+      if (!toggle || !nav || !overlay) return;
+
+      function closeMenu() {
+        nav.classList.remove('open');
+        toggle.classList.remove('open');
+        overlay.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+
       toggle.addEventListener('click', function () {
         var isOpen = nav.classList.toggle('open');
+        toggle.classList.toggle('open', isOpen);
+        overlay.classList.toggle('open', isOpen);
         toggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      overlay.addEventListener('click', closeMenu);
+
+      // Optional: Close menu on nav link click (mobile)
+      nav.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') closeMenu();
       });
     })();
   </script>

@@ -39,37 +39,83 @@ body{
 /* Hamburger button */
 .menu-toggle {
   display: none;
-  background: transparent;
-  border: none;
-  width: 40px;
-  height: 40px;
+  background: #fff;
+  border: 2px solid #25282b;
+  border-radius: 8px;
+  width: 44px;
+  height: 44px;
   align-items: center;
   justify-content: center;
-  gap: 5px;
+  position: relative;
+  z-index: 1002;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 0;
+}
+.menu-toggle.open {
+  background: #f7f7f7;
+  border-color: #fdc435;
 }
 .menu-bar {
   display: block;
   width: 24px;
-  height: 2px;
+  height: 3px;
   background: #25282b;
-}
-.navbar-tab {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: all 0.3s;
   position: relative;
 }
-.navbar-link {
+.menu-toggle.open .menu-bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-toggle.open .menu-bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open .menu-bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+/* Overlay for mobile nav */
+.navbar-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.25);
+  z-index: 1001;
+  transition: opacity 0.3s;
+}
+.navbar-overlay.open {
+  display: block;
+  opacity: 1;
+}
+.navbar-header {
+  padding: 6px 6px 6px 6px;
+  height: 45px;
+  position: relative;
+  display: flex;
+}
+.brand-name {
   color: var(--font-high-emphasis, #25282b);
   text-align: left;
-  font-family: var(--body-18px-font-family, "Raleway-Medium", sans-serif);
-  font-size: var(--body-18px-font-size, 18px);
-  line-height: var(--body-18px-line-height, 28px);
-  font-weight: var(--body-18px-font-weight, 500);
-  position: relative;
+  font-family: "Comfortaa-Bold", sans-serif;
+  font-size: 19px;
+  line-height: 180%;
+  font-weight: 700;
+  position: absolute;
+  left: 53px;
+  top: 6px;
+}
+.navbar-tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  right: 52px;
+  top: 7px;
 }
 /* About Section */
 .about-intro,
@@ -289,8 +335,9 @@ body{
   width: 486px;
 }
 .project-description{
-  height: 250px;
-  width: 300px;
+  height: 200px;
+  overflow:scroll;
+  width: 400px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -301,7 +348,7 @@ body{
   line-height: 135%;
   font-weight: 400;
   position: relative;
-  width: 486px;
+  
 }
 /* Footer Section */
 .footer-section,
@@ -434,11 +481,30 @@ img, video, svg {
   .navbar-tabs {
     display: none;
     flex-direction: column;
-    gap: 8px;
-    width: 100%;
-    margin-top: 8px;
+    gap: 12px;
+    width: 90vw;
+    max-width: 340px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    position: absolute;
+    top: 54px; /* just below the button */
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 1003;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s, transform 0.3s;
   }
-  .navbar-tabs.open { display: flex; }
+  .navbar-tabs.open {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .navbar-overlay {
+    display: none;
+  }
 
   /* About */
   .about-section {
@@ -496,7 +562,7 @@ img, video, svg {
     align-items: stretch;
     height: auto;
     padding: 16px;
-    width: 90vw;
+    width: 80vw;
   }
   .project-image {
     width: 100%;
