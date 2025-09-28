@@ -1,6 +1,12 @@
 body{
     margin: 0px;
     padding: 0px;
+    
+    
+
+}
+body::-webkit-scrollbar{
+  display: none;
 }
 /* Navbar Header */
 .navbar-header,
@@ -233,6 +239,7 @@ body{
   top:-67px;
   left:1px;
   z-index: -1;
+  
 }
 .about-image-main{
   height: 500px;
@@ -350,69 +357,89 @@ body{
   position: relative;
   
 }
+.project-description::-webkit-scrollbar{
+  display: none;
+}
 /* Footer Section */
-.footer-section,
-.footer-section * {
-  box-sizing: border-box;
-}
-.footer-section {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.footer-icons {
-  display: flex;
-  flex-direction: row;
-  gap: 24px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
-}
-.icon-instagram {
-  flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  position: relative;
-  overflow: visible;
-}
-.icon-linkedin {
-  flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  position: relative;
-  overflow: hidden;
-}
-.icon-linkedin-img {
-  width: 79.17%;
-  height: 79.17%;
-  position: absolute;
-  right: 10.42%;
-  left: 10.42%;
-  bottom: 10.42%;
-  top: 10.42%;
-  overflow: visible;
-}
-.icon-email {
-  flex-shrink: 0;
-  width: 48px;
-  height: 48px;
-  position: relative;
-  overflow: hidden;
-}
-.icon-email-img {
-  width: 87.5%;
-  height: 66.67%;
-  position: absolute;
-  right: 6.25%;
-  left: 6.25%;
-  bottom: 16.67%;
-  top: 16.67%;
-  overflow: visible;
-}
+
+.site-footer {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #111827; /* Dark background color */
+    color: #9ca3af;           /* Default light gray text color */
+    padding: 32px 16px; 
+    margin-top: 15px;
+    height: 40px;       /* Vertical and horizontal padding */
+  }
+
+  /* Centers the content and limits its width on large screens */
+  .footer-container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Flexbox layout for the footer content */
+  .footer-layout {
+    display: flex;
+    align-items: center;      /* Vertically centers all items */
+    
+    /* --- Mobile First: Stack items vertically by default --- */
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  /* Space between stacked items on mobile */
+  .footer-info,
+  .footer-links {
+    margin-bottom: 16px;
+  }
+
+  /* Styles for the main name */
+  .footer-name {
+    color: #ffffff;
+    font-weight: 700;       /* Bold */
+    font-size: 1.125rem;    /* Larger font size */
+    margin: 0 0 4px 0;      /* Reset margin and add a little space below */
+  }
+
+  /* Styles for the smaller text */
+  .footer-subtitle,
+  .footer-copyright p {
+    font-size: 0.875rem;
+    margin: 0; /* Reset default paragraph margin */
+  }
+
+  /* Styles for the social media links section */
+  .footer-links {
+    display: flex;
+    gap: 24px; /* Creates space between the links */
+  }
+
+  .footer-links a {
+    color: inherit; /* Uses the parent's text color (#9ca3af) */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out; /* Smooth transition for hover effect */
+  }
+
+  /* Hover effect for links */
+  .footer-links a:hover {
+    color: #ffffff;
+  }
+
+  /* --- Responsive Styles for larger screens (768px and up) --- */
+  @media (min-width: 768px) {
+    .footer-layout {
+      flex-direction: row;             /* Change to a horizontal layout */
+      justify-content: space-between;  /* Space items out evenly */
+      text-align: left;                /* Align text to the left */
+    }
+    
+    /* Remove the bottom margin on larger screens */
+    .footer-info,
+    .footer-links {
+      margin-bottom: 0;
+    }
+  }
 .brand-name {
   color: var(--font-medium-emphasis, #828282);
   text-align: left;
