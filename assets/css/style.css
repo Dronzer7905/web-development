@@ -387,8 +387,7 @@ body::-webkit-scrollbar{
     background-color: #111827; /* Dark background color */
     color: #9ca3af;           /* Default light gray text color */
     padding: 32px 16px; 
-    margin-top: 15px;
-    height: 40px;       /* Vertical and horizontal padding */
+    margin-top: 15px;     /* Vertical and horizontal padding */
   }
 
   /* Centers the content and limits its width on large screens */
