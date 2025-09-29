@@ -368,7 +368,7 @@ body::-webkit-scrollbar{
     color: #9ca3af;           /* Default light gray text color */
     padding: 32px 16px; 
     margin-top: 15px;
-    height: 40px;       /* Vertical and horizontal padding */
+    height:auto;      /* Vertical and horizontal padding */
   }
 
   /* Centers the content and limits its width on large screens */
