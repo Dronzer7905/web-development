@@ -1,9 +1,15 @@
 body{
     margin: 0px;
     padding: 0px;
-    
-    
-
+    scroll-behavior: smooth;
+}
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+}
+section {
+  padding: 40px 0;
 }
 body::-webkit-scrollbar{
   display: none;
@@ -278,6 +284,78 @@ body::-webkit-scrollbar{
   justify-content: flex-start;
   flex-shrink: 0;
   position: relative;
+  min-height: 80vh;
+}
+.hero-section {
+  padding-top: 60px;
+}
+/* About Detailed Section */
+.about-detailed-content {
+  max-width: 800px;
+  margin: 40px auto 0;
+  font-family: "Nunito-Regular", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--font-medium-emphasis);
+  text-align: center;
+}
+.about-detailed-content p {
+  margin-bottom: 20px;
+}
+
+/* Skills Section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 50px;
+}
+.skill-category h3 {
+  font-family: "PlayfairDisplay-Bold", sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--font-high-emphasis);
+  border-bottom: 2px solid var(--brand-yellow);
+  width: fit-content;
+  padding-bottom: 5px;
+}
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.skill-tag {
+  background: #f3f4f6;
+  color: var(--font-high-emphasis);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-family: "Nunito-Regular", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+.skill-tag:hover {
+  background: var(--brand-yellow);
+  border-color: var(--brand-yellow);
+  transform: translateY(-2px);
+}
+.spec-list {
+  list-style: none;
+  padding: 0;
+}
+.spec-list li {
+  margin-bottom: 12px;
+  font-family: "Nunito-Regular", sans-serif;
+  color: var(--font-medium-emphasis);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.spec-list li::before {
+  content: "→";
+  color: var(--brand-yellow);
+  font-weight: bold;
 }
 /* Projects Section */
 .projects-header{
@@ -379,6 +457,104 @@ body::-webkit-scrollbar{
 }
 .project-description::-webkit-scrollbar{
   display: none;
+}
+.project-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+.project-tech-tags .skill-tag {
+  font-size: 12px;
+  padding: 4px 12px;
+}
+
+/* Contact Section */
+.section-subtitle {
+  text-align: center;
+  color: var(--font-medium-emphasis);
+  margin-top: 10px;
+  font-family: "Nunito-Regular", sans-serif;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  margin-top: 50px;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.contact-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.contact-item i {
+  font-size: 24px;
+  color: var(--brand-yellow);
+  width: 30px;
+  text-align: center;
+}
+.contact-item h4 {
+  margin: 0 0 5px 0;
+  font-family: "PlayfairDisplay-Bold", sans-serif;
+  color: var(--font-high-emphasis);
+}
+.contact-item p {
+  margin: 0;
+  font-family: "Nunito-Regular", sans-serif;
+  color: var(--font-medium-emphasis);
+}
+.contact-item a {
+  color: inherit;
+  text-decoration: none;
+}
+.contact-item a:hover {
+  color: var(--brand-yellow);
+}
+.contact-form-container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  border: 2px solid var(--bg-line);
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.form-group label {
+  font-family: "Nunito-Bold", sans-serif;
+  color: var(--font-high-emphasis);
+  font-size: 14px;
+}
+.form-group input,
+.form-group textarea {
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-family: "Nunito-Regular", sans-serif;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--brand-yellow);
+}
+.contact-form button {
+  width: fit-content;
+  cursor: pointer;
+  border: none;
+  align-self: flex-start;
 }
 /* Footer Section */
 
@@ -663,5 +839,18 @@ img, video, svg {
   .about-images img:nth-child(2) {
     width: 75%;
     max-width: 340px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .contact-form-container {
+    padding: 20px;
+  }
+  .section-container {
+    padding: 40px 15px;
+  }
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 }

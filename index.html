@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link rel="stylesheet" href="assets/css/style.css" />
-  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>Ansh Gautam | Full-Stack Developer & Entrepreneur</title>
 </head>
 
 <body>
@@ -22,62 +23,124 @@
       <div class="navbar-tabs" id="primary-navigation">
         <div class="navbar-tab">
           <div class="navbar-link">
-            <a href="#about">
-              About
-            </a>
+            <a href="#about">About</a>
           </div>
         </div>
         <div class="navbar-tab">
-          <div class="navbar-link">Contact</div>
+          <div class="navbar-link">
+            <a href="#skills">Skills</a>
+          </div>
         </div>
         <div class="navbar-tab">
           <div class="navbar-link">
-            <a href="#projects">Project</a>
+            <a href="#projects">Projects</a>
+          </div>
+        </div>
+        <div class="navbar-tab">
+          <div class="navbar-link">
+            <a href="#contact">Contact</a>
           </div>
         </div>
       </div>
     </div>
     <div class="navbar-overlay"></div>
   </nav>
-  <section id="about">
-    <div class="about-section">
+  <section id="hero">
+    <div class="about-section hero-section">
       <div class="about-intro">
         <div class="about-field">
-          computer science &amp; engineering
+          Founder of DevTailored · Full-Stack Developer · Open Source Builder
         </div>
         <div class="about-content">
-          <div class="about-title">Hello, This is Ansh Gautam</div>
+          <div class="about-title">I'm Ansh Gautam</div>
           <div class="about-subheadline">
             <div class="about-description">
-              I am Enthusiastic individual intresting in learning and
-              exploring various technology. My interest in programmimg
-              languages like python and java. My miticulous approach is to
-              share my knowledge with others
+              I'm a Computer Science & Engineering graduate (AKTU, 2025) from Kanpur, India. I build practical software products — from school management ERPs to AI-powered developer tools. Currently running DevTailored, a custom software studio helping schools, coaching centers, and small businesses go digital.
             </div>
           </div>
           <div class="about-buttons">
             <div class="btn-primary">
               <div class="btn-text">
-                <a href="#projects" style="text-decoration: none; color: black">Projects</a>
+                <a href="#projects" style="text-decoration: none; color: black">View Work</a>
               </div>
             </div>
             <div class="btn-secondary">
               <div class="btn-text">
-                <a href="https://www.linkedin.com/in/ansh-gautam-2324702ab/"
-                  style="text-decoration: none; color: black">
-
-                  LinkedIn
-
-                </a>
+                <a href="#contact" style="text-decoration: none; color: black">Let's Talk</a>
               </div>
-
             </div>
           </div>
         </div>
       </div>
       <div class="about-images">
-        <img src="assets/images/firstimg.png" class="about-image-main"  alt="image">
-        <img src="assets/images/image2.svg" alt="image">
+        <img src="assets/images/firstimg.png" class="about-image-main" alt="Ansh Gautam">
+        <img src="assets/images/image2.svg" alt="Decoration">
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-container">
+      <div class="projects-header">
+        <div class="projects-title">About Me</div>
+        <div class="projects-divider"></div>
+      </div>
+      <div class="about-detailed-content">
+        <p>I'm Ansh Gautam, a Full-Stack Developer and Entrepreneur from Kanpur, Uttar Pradesh. I completed my B.Tech in Computer Science & Engineering from APJ Abdul Kalam Technical University in 2025.</p>
+        <p>I founded DevTailored — a bootstrapped software studio building digital products for schools, coaching centers, and small businesses across India. Our products include Vidya Tools (school ERP), Online Dukan (WhatsApp-based ordering), MVP Lab (rapid prototyping), and ProBrand (portfolio websites).</p>
+        <p>I also build open-source tools — most notably Snapfix, a VS Code extension that catches Python errors in real time and suggests AI-powered fixes. I believe in building fast, shipping early, and solving real problems.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="section-container">
+      <div class="projects-header">
+        <div class="projects-title">Skills & Technologies</div>
+        <div class="projects-divider"></div>
+      </div>
+      
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Languages & Frameworks</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">Tailwind CSS</span>
+            <span class="skill-tag">Jinja2</span>
+            <span class="skill-tag">SQLAlchemy</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Tools & Platforms</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">SQLite</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">WhatsApp Business API</span>
+            <span class="skill-tag">LiteLLM</span>
+            <span class="skill-tag">OpenAI API</span>
+            <span class="skill-tag">Anthropic API</span>
+            <span class="skill-tag">Brevo SMTP</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Specializations</h3>
+          <ul class="spec-list">
+            <li>Backend API Development</li>
+            <li>LLM & AI Integration</li>
+            <li>Real-Time Systems using WebSockets</li>
+            <li>VS Code Extension Development</li>
+            <li>SEO & Web Performance Optimization</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -113,22 +176,115 @@
 
       <div class="project-card">
         <div class="project-image">
-          <img src="assets/images/markdown-preview.png" alt="" />
+          <img src="assets/images/markdown-preview.png" alt="Live Markdown Preview" />
         </div>
         <div class="project-info">
           <div class="project-name">
             Live Markdown Preview
-
           </div>
           <div class="projects-divider"></div>
-
           <div class="project-description">
-            The Live Markup Previewer is a real-time web application designed to convert Markdown text to HTML. This
-            project showcases my proficiency in full-stack development by integrating a robust FastAPI backend with a
-            modern, interactive frontend built using HTML, JavaScript, and Tailwind CSS. The application features live
-            preview functionality, advanced Markdown support including syntax highlighting with Pygments, tables, and
-            special admonition blocks. This project highlights my ability to create a responsive, feature-rich web tool.
+            The Live Markup Previewer is a real-time web application designed to convert Markdown text to HTML. This project showcases my proficiency in full-stack development by integrating a robust FastAPI backend with a modern, interactive frontend.
           </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-info">
+          <div class="project-name">
+            Snapfix (Open Source)
+            <div class="projects-divider"></div>
+          </div>
+          <div class="project-description">
+            An AI-powered VS Code extension that detects Python tracebacks in real time and displays AI-generated explanations and one-click fixes in a side panel. Built with TypeScript and integrated with LLM APIs including OpenAI and Anthropic.
+          </div>
+          <div class="project-tech-tags">
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">LLM APIs</span>
+            <span class="skill-tag">VS Code Extension API</span>
+          </div>
+          <div class="btn-primary" style="width: fit-content; margin-top: 10px;">
+            <div class="btn-text">
+              <a href="https://github.com/Dronzer7905" target="_blank" style="text-decoration: none; color: black">View on GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-image">
+          <!-- Placeholder for Snapfix image, will generate if needed or use icon -->
+          <div style="background: #f3f4f6; height: 100%; display: flex; align-items: center; justify-content: center;">
+            <i class="fas fa-code-branch" style="font-size: 80px; color: var(--brand-yellow);"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-container">
+      <div class="projects-header">
+        <div class="projects-title">Contact Me</div>
+        <div class="projects-divider"></div>
+        <p class="section-subtitle">Have a project in mind or want to collaborate? Let's talk.</p>
+      </div>
+      
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:ansh@devtailored.com">ansh@devtailored.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-globe"></i>
+            <div>
+              <h4>Website</h4>
+              <p><a href="https://devtailored.com" target="_blank">devtailored.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <div>
+              <h4>LinkedIn</h4>
+              <p><a href="https://linkedin.com/in/ansh-gautam-2324702ab" target="_blank">ansh-gautam-2324702ab</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <div>
+              <h4>GitHub</h4>
+              <p><a href="https://github.com/Dronzer7905" target="_blank">Dronzer7905</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Location</h4>
+              <p>Kanpur, Uttar Pradesh, India</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form-container">
+          <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required placeholder="Your Email">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required placeholder="Your Message" rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn-primary">
+              <span class="btn-text">Send Message</span>
+            </button>
+          </form>
         </div>
       </div>
     </div>
@@ -140,7 +296,7 @@
           
           <div class="footer-info">
             <p class="footer-name">Ansh Gautam</p>
-            <p class="footer-subtitle">Computer Science & Engineering Student</p>
+            <p class="footer-subtitle">Founder of DevTailored & Full-Stack Developer</p>
           </div>
           
           <div class="footer-links">
