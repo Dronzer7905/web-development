@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <link rel="stylesheet" href="assets/css/vars.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <title>Ansh Gautam | Full-Stack Developer & Entrepreneur</title>
@@ -15,11 +16,16 @@
   <nav>
     <div class="navbar-header">
       <div class="brand-name">Ansh Gautam</div>
-      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
-        <span class="menu-bar"></span>
-        <span class="menu-bar"></span>
-        <span class="menu-bar"></span>
-      </button>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="btn-theme" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-navigation">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+      </div>
       <div class="navbar-tabs" id="primary-navigation">
         <div class="navbar-tab">
           <div class="navbar-link">
@@ -46,35 +52,36 @@
     <div class="navbar-overlay"></div>
   </nav>
   <section id="hero">
-    <div class="about-section hero-section">
-      <div class="about-intro">
-        <div class="about-field">
-          Founder of DevTailored · Full-Stack Developer · Open Source Builder
-        </div>
-        <div class="about-content">
-          <div class="about-title">I'm Ansh Gautam</div>
-          <div class="about-subheadline">
-            <div class="about-description">
-              I'm a Computer Science & Engineering graduate (AKTU, 2025) from Kanpur, India. I build practical software products — from school management ERPs to AI-powered developer tools. Currently running DevTailored, a custom software studio helping schools, coaching centers, and small businesses go digital.
-            </div>
+    <div class="section-container hero-section">
+      <div class="hero-content-wrapper">
+        <div class="about-intro">
+          <div class="hero-badge">Available for Projects</div>
+          <div class="about-field">
+            Founder of DevTailored · Full-Stack Developer · AI Builder
           </div>
-          <div class="about-buttons">
-            <div class="btn-primary">
-              <div class="btn-text">
-                <a href="#projects" style="text-decoration: none; color: black">View Work</a>
-              </div>
+          <div class="about-content">
+            <h1 class="about-title">Building <span class="text-gradient">practical</span> software for the real world.</h1>
+            <div class="about-subheadline">
+              <p class="about-description">
+                I'm <strong>Ansh Gautam</strong>, a developer and entrepreneur focused on building high-impact tools—from custom school ERPs to AI-powered developer extensions. 
+              </p>
             </div>
-            <div class="btn-secondary">
-              <div class="btn-text">
-                <a href="#contact" style="text-decoration: none; color: black">Let's Talk</a>
-              </div>
+            <div class="about-buttons">
+              <a href="#projects" class="btn-primary">Explore My Work <i class="fas fa-arrow-right"></i></a>
+              <a href="#contact" class="btn-secondary">Get in Touch</a>
             </div>
           </div>
         </div>
-      </div>
-      <div class="about-images">
-        <img src="assets/images/firstimg.png" class="about-image-main" alt="Ansh Gautam">
-        <img src="assets/images/image2.svg" alt="Decoration">
+        <div class="hero-symbol">
+          <div class="symbol-container">
+            <i class="fas fa-code"></i>
+            <div class="floating-icons">
+              <i class="fab fa-python icon-1"></i>
+              <i class="fab fa-js icon-2"></i>
+              <i class="fab fa-react icon-3"></i>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -150,70 +157,46 @@
         <div class="projects-title">Projects</div>
         <div class="projects-divider"></div>
       </div>
-      <div class="project-card">
-        <div class="project-info">
-          <div class="project-name">
-            My Portfolio
-            <div class="projects-divider"></div>
-          </div>
 
-
-          <div class="project-description">
-            I have developed my personal portfolio website to showcase my
-            journey and projects. This website serves as a testament to my
-            skills in web development, featuring an aesthetically pleasing
-            design and user-friendly interface. It highlights my academic
-            achievements, projects, and technical expertise in various
-            programming languages and tools. Through this portfolio, I aim to
-            demonstrate my commitment to continuous learning and innovation in
-            the field of web development.
-          </div>
-        </div>
-        <div class="project-image">
-          <img src="assets/images/pro1.png" alt="" />
-        </div>
-      </div>
 
       <div class="project-card">
-        <div class="project-image">
-          <img src="assets/images/markdown-preview.png" alt="Live Markdown Preview" />
+        <div class="project-symbol">
+          <i class="fab fa-markdown"></i>
         </div>
         <div class="project-info">
-          <div class="project-name">
-            Live Markdown Preview
-          </div>
+          <h3 class="project-name">Live Markdown Preview</h3>
           <div class="projects-divider"></div>
-          <div class="project-description">
-            The Live Markup Previewer is a real-time web application designed to convert Markdown text to HTML. This project showcases my proficiency in full-stack development by integrating a robust FastAPI backend with a modern, interactive frontend.
+          <p class="project-description">
+            A real-time web application converting Markdown to HTML instantly. Features syntax highlighting and live preview functionality using a robust FastAPI backend and WebSocket integration.
+          </p>
+          <div class="project-tech-tags">
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">WebSockets</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/Dronzer7905" target="_blank" class="btn-primary">View Project <i class="fas fa-external-link-alt"></i></a>
           </div>
         </div>
       </div>
 
       <div class="project-card">
+        <div class="project-symbol">
+          <i class="fas fa-bolt"></i>
+        </div>
         <div class="project-info">
-          <div class="project-name">
-            Snapfix (Open Source)
-            <div class="projects-divider"></div>
-          </div>
-          <div class="project-description">
-            An AI-powered VS Code extension that detects Python tracebacks in real time and displays AI-generated explanations and one-click fixes in a side panel. Built with TypeScript and integrated with LLM APIs including OpenAI and Anthropic.
-          </div>
+          <h3 class="project-name">Snapfix (Open Source)</h3>
+          <div class="projects-divider"></div>
+          <p class="project-description">
+            AI-powered VS Code extension for real-time Python error detection and one-click fixes. Integrated with OpenAI and Anthropic APIs for intelligent code explanations and refactoring.
+          </p>
           <div class="project-tech-tags">
             <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">Python</span>
             <span class="skill-tag">LLM APIs</span>
-            <span class="skill-tag">VS Code Extension API</span>
+            <span class="skill-tag">VS Code API</span>
           </div>
-          <div class="btn-primary" style="width: fit-content; margin-top: 10px;">
-            <div class="btn-text">
-              <a href="https://github.com/Dronzer7905" target="_blank" style="text-decoration: none; color: black">View on GitHub</a>
-            </div>
-          </div>
-        </div>
-        <div class="project-image">
-          <!-- Placeholder for Snapfix image, will generate if needed or use icon -->
-          <div style="background: #f3f4f6; height: 100%; display: flex; align-items: center; justify-content: center;">
-            <i class="fas fa-code-branch" style="font-size: 80px; color: var(--brand-yellow);"></i>
+          <div class="project-actions">
+            <a href="https://github.com/Dronzer7905" target="_blank" class="btn-primary">View on GitHub <i class="fab fa-github"></i></a>
           </div>
         </div>
       </div>
@@ -234,7 +217,7 @@
             <i class="fas fa-envelope"></i>
             <div>
               <h4>Email</h4>
-              <p><a href="mailto:ansh@devtailored.com">ansh@devtailored.com</a></p>
+              <p><a href="mailto:sunnyg786420@gmail.com">sunnyg786420@gmail.com</a></p>
             </div>
           </div>
           <div class="contact-item">
@@ -268,7 +251,7 @@
         </div>
         
         <div class="contact-form-container">
-          <form action="https://formspree.io/f/your-form-id" method="POST" class="contact-form">
+          <form action="https://formspree.io/f/sunnyg786420@gmail.com" method="POST" class="contact-form">
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required placeholder="Your Name">
@@ -282,7 +265,7 @@
               <textarea id="message" name="message" required placeholder="Your Message" rows="5"></textarea>
             </div>
             <button type="submit" class="btn-primary">
-              <span class="btn-text">Send Message</span>
+              Send Message
             </button>
           </form>
         </div>
@@ -316,30 +299,43 @@
 </body>
 <script>
   (function () {
+    // Mobile Menu Toggle
     var toggle = document.querySelector('.menu-toggle');
     var nav = document.getElementById('primary-navigation');
-    var overlay = document.querySelector('.navbar-overlay');
-    if (!toggle || !nav || !overlay) return;
-
-    function closeMenu() {
-      nav.classList.remove('open');
-      toggle.classList.remove('open');
-      overlay.classList.remove('open');
-      toggle.setAttribute('aria-expanded', 'false');
+    if (toggle && nav) {
+      toggle.addEventListener('click', function () {
+        var isOpen = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+      });
     }
 
-    toggle.addEventListener('click', function () {
-      var isOpen = nav.classList.toggle('open');
-      toggle.classList.toggle('open', isOpen);
-      overlay.classList.toggle('open', isOpen);
-      toggle.setAttribute('aria-expanded', String(isOpen));
+    // Theme Toggle
+    var themeToggle = document.getElementById('theme-toggle');
+    var currentTheme = localStorage.getItem('theme') || 'light';
+    
+    if (currentTheme === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+      themeToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+    }
+
+    themeToggle.addEventListener('click', function() {
+      var isDark = document.body.hasAttribute('data-theme');
+      if (isDark) {
+        document.body.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        themeToggle.querySelector('i').classList.replace('fa-sun', 'fa-moon');
+      } else {
+        document.body.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        themeToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+      }
     });
 
-    overlay.addEventListener('click', closeMenu);
-
-    // Optional: Close menu on nav link click (mobile)
+    // Close menu on nav link click (mobile)
     nav.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A') closeMenu();
+      if (e.target.tagName === 'A' && window.innerWidth <= 768) {
+        nav.classList.remove('open');
+      }
     });
   })();
 </script>
